@@ -1,0 +1,58 @@
+print('Este programa devuelve el dígito verificador de un rut')
+print('Favor ingresar rut de 8 números sin puntos ni dígito verificador')
+
+Rut = int(input())
+
+a1 = Rut/10                                
+resto1 = Rut % 10       #numero a multiplicar por 2
+entero1 = Rut // 10
+Multiplicación1 = resto1*2
+
+a2 = entero1/10
+resto2 = entero1 % 10        #numero a multiplicar por 3
+entero2 = entero1 // 10
+Multiplicación2 = resto2*3
+
+a3 = entero2/10
+resto3 = entero2 % 10        #numero a multiplicar por 4
+entero3 = entero2 // 10
+Multiplicación3 = resto3*4
+
+a4 = entero3/10
+resto4 = entero3 % 10        #numero a multiplicar por 5
+entero4 = entero3 // 10
+Multiplicación4 = resto4*5
+
+a5 = entero4/10
+resto5 = entero4 % 10        #numero a multiplicar por 6
+entero5 = entero4 // 10
+Multiplicación5 = resto5*6
+
+a6 = entero5/10
+resto6 = entero5 % 10        #numero a multiplicar por 7
+entero6 = entero5 // 10
+Multiplicación6 = resto6*7
+
+a7 = entero6/10
+resto7 = entero6 % 10        #numero a multiplicar por 2
+entero7 = entero6 // 10
+Multiplicación7 = resto7*2
+
+a8 = entero7/10
+resto8 = entero7 % 10        #numero a multiplicar por 3
+entero8 = entero7 // 10
+Multiplicación8 = resto8*3
+
+
+Suma_Multiplicación = (Multiplicación1+Multiplicación2+Multiplicación3+Multiplicación4+Multiplicación5+Multiplicación6+Multiplicación7+Multiplicación8)
+
+División_suma = (Suma_Multiplicación/11)
+Entero_Divisónsuma = (int(División_suma))
+Resta_entero = (11*Entero_Divisónsuma)
+Resto_resultado = (Suma_Multiplicación-Resta_entero)
+
+Resto_resultado2 = (Suma_Multiplicación%11)
+
+Dig_Ver = (11-Resto_resultado2)
+
+print('El rut con dígito verificador es el siguiente: ',Rut,'-',Dig_Ver)
